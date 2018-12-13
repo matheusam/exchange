@@ -1,28 +1,19 @@
 <h1>Details</h1>
-<%= link_to "Return", root_path %>
-<%= link_to "Edit", edit_transaction_path %>
-<%= link_to "Delete", transactions_path, method: :delete %>
-<table>
-  <thead>
-    <tr>
-      <th>Identificador</th>
-      <th>Quantidade</th>
-      <th>Moeda</th>
-      <th>Tipo</th>
-      <th>Total</th>
-      <th>Cotação</th>
-      <th>Data</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><%= @transaction.id %></td>
-      <td><%= format("%.2f", @transaction.amount) %></td>
-      <td><%= @transaction.str_converter(@transaction.currency) %></td>
-      <td><%= @transaction.str_converter(@transaction.transaction_type) %></td>
-      <td><%= @transaction.read_attribute(:total) %></td>
-      <td><%= "R$ #{format("%.2f",@transaction.quotation)}" %></td>
-      <td><%= @transaction.date.strftime('%d/%m/%Y') %></td>
-    </tr>
-  </tbody>
-</table>
+<%= link_to "Voltar", root_path %>
+<%= link_to "Editar", edit_transaction_path %>
+<%= link_to "Deletar", transactions_path, method: :delete %>
+
+  <h3>Identificador</h3>
+    <p><%= @transaction.id %></p>
+  <h3>Quantidade</h3>
+    <p><%= format("%.2f", @transaction.amount) %></p>
+  <h3>Moeda</h3>
+    <p><%= @transaction.str_converter(@transaction.currency) %></p>
+  <h3>Tipo</h3>
+    <p><%= @transaction.str_converter(@transaction.transaction_type) %></p>
+  <h3>Total</h3>
+    <p><%= @transaction.total(@transaction) %></p>
+  <h3>Cotação</h3>
+    <p><%= "R$ #{format("%.2f",@transaction.quotation)}" %></p>
+  <h3>Data</h3>
+    <p style="color:red;"><%= @transaction.created_at.strftime('%d/%m/%Y') %></p>

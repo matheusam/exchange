@@ -3,8 +3,15 @@ class TransactionsController < ApplicationController
     @transaction = Transaction.new
   end
 
-  def create
+  def created_at(transaction)
+      transaction.date.strftime('%d/%m/%Y')
+  end
 
+  def create
+    @transaction = Transaction.new(amount, currency, quotation, transaction_type)
+    if @transaction.save
+        redirect_to @transaction
+    end
   end
 
   def show
