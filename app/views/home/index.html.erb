@@ -1,0 +1,29 @@
+<h1>Exchange</h1>
+<p>Bem-vindo ao sistema de trocas de moedas</p>
+<% empty = "Você ainda não possui transações cadastradas" %>
+<% if @transactions.empty? %>
+  <p><%= empty %><p>
+<% else %>
+<table>
+  <thead>
+    <tr>
+      <th>Identificador</th>
+      <th>Quantidade</th>
+      <th>Moeda</th>
+      <th>Tipo</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @transactions.each { |t| %>
+    <tr>
+      <td><%= link_to t.id, t %></td>
+      <td><%= format("%.2f", t.amount) %></td>
+      <td><%= t.str_converter(t.currency) %></td>
+      <td><%= t.str_converter(t.transaction_type) %></td>
+      <td><%= t.total(t) %></td>
+    </tr>
+    <% } %>
+  </tbody>
+</table>
+<% end %>
