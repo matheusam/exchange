@@ -1,2 +1,15 @@
-<h1>Transactions#new</h1>
-<p>Find me in app/views/transactions/new.html.erb</p>
+<h1>Nova transação</h1>
+<% if @transaction.invalid? %>
+  <p>Você deve informar todos os dados da transação</p>
+<% end %>
+  <%= form_with model: @transaction do |form| %>
+  <%= form.label :amount, 'Quantidade' %>
+  <%= form.text_field :amount, placeholder: "Quantidade" %>
+  <%= form.label :currency, 'Moeda' %>
+  <%= form.select :currency,  [['Dólar', 'dollar'], ['Real', 'real']], :include_blank => "Escolha a moeda" %>
+  <%= form.text_field :quotation, placeholder: "Cotação" %>
+  <%= form.label :transaction_type, 'Tipo' %>
+  <%= form.select :transaction_type,  [['Compra', 'buy'], ['Venda', 'sell']], :include_blank => "Escolha o Tipo" %>
+
+  <%= form.submit "Cadastrar" %>
+<% end %>

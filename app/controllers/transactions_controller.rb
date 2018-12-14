@@ -4,13 +4,16 @@ class TransactionsController < ApplicationController
   end
 
   def created_at(transaction)
-      transaction.date.strftime('%d/%m/%Y')
+      @transaction.date.strftime('%d/%m/%Y')
   end
 
   def create
-    @transaction = Transaction.new(amount, currency, quotation, transaction_type)
+    @transaction = Transaction.new(params.require(:transaction).permit(:amount, :currency, :quotation, :transaction_type))
     if @transaction.save
         redirect_to @transaction
+    else
+      flash[:alert] = 'Você deve informar todos os dados da transação'
+      render :new
     end
   end
 
@@ -19,6 +22,7 @@ class TransactionsController < ApplicationController
   end
 
   def edit
+
   end
 
   def update

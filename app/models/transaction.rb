@@ -1,4 +1,5 @@
 class Transaction < ApplicationRecord
+  validates :amount, :currency, :quotation, :transaction_type, presence: true
   def str_converter(input)
     case input
       when 'dollar'

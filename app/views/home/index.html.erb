@@ -1,5 +1,6 @@
 <h1>Exchange</h1>
 <p>Bem-vindo ao sistema de trocas de moedas</p>
+<%= link_to "Registrar transação", new_transaction_path %>
 <% empty = "Você ainda não possui transações cadastradas" %>
 <% if @transactions.empty? %>
   <p><%= empty %><p>
