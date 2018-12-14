@@ -2,6 +2,7 @@
 <% if @transaction.invalid? %>
   <p>Você deve informar todos os dados da transação</p>
 <% end %>
+  <%= link_to "Voltar", root_path %>
   <%= form_with model: @transaction do |form| %>
   <%= form.label :amount, 'Quantidade' %>
   <%= form.text_field :amount, placeholder: "Quantidade" %>

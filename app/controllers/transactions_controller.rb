@@ -22,10 +22,17 @@ class TransactionsController < ApplicationController
   end
 
   def edit
-
+    @transaction = Transaction.find(params[:id])
   end
 
   def update
+    @transaction = Transaction.find(params[:id])
+    if @transaction.update(params.require(:transaction).permit(:amount, :currency, :quotation, :transaction_type))
+        redirect_to transaction_path(@transaction)
+    else
+      flash[:alert] = 'Você deve informar todos os dados da transação'
+      render :new
+    end
   end
 
   def destroy

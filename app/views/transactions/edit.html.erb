@@ -1,2 +1,15 @@
-<h1>Transactions#edit</h1>
-<p>Find me in app/views/transactions/edit.html.erb</p>
+<h1>Editar transação</h1>
+  <%= link_to "Voltar", root_path %>
+  <%= form_with model: @transaction do |form| %>
+  <h3>Quantidade</h3>
+  <%= form.text_field :amount, placeholder: "Quantidade" %>
+  <!-- <h3>Moeda</h3> -->
+  <%= form.label :currency, 'Moeda' %>
+  <%= form.select :currency,  [['Dólar', 'dollar'], ['Real', 'real']], :include_blank => "Escolha a moeda" %>
+  <h3>Cotação</h3>
+  <%= form.text_field :quotation, placeholder: "Cotação" %>
+  <%= form.label :transaction_type, 'Tipo' %>
+  <%= form.select :transaction_type,  [['Compra', 'buy'], ['Venda', 'sell']], :include_blank => "Escolha o Tipo" %>
+
+  <%= form.submit "Editar" %>
+<% end %>
