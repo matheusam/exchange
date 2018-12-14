@@ -2,6 +2,7 @@
 <p>Bem-vindo ao sistema de trocas de moedas</p>
 <%= link_to "Registrar transação", new_transaction_path %>
 <% empty = "Você ainda não possui transações cadastradas" %>
+<p id="notice"><%= flash[:notice] %></p>
 <% if @transactions.empty? %>
   <p><%= empty %><p>
 <% else %>
