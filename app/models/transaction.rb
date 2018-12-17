@@ -17,17 +17,19 @@ class Transaction < ApplicationRecord
     case transaction.currency
     when 'dollar'
       if transaction.transaction_type == 'sell'
-        total = "$ #{ format("%.2f", -transaction.amount)}"
+        t = "$ #{ format("%.2f", -transaction.amount)}"
+      else
+        t = "$ #{ format("%.2f", transaction.amount)}"
       end
     when 'real'
       dollares = transaction.amount / transaction.quotation
       if transaction.transaction_type == 'buy'
-        total = "$ #{ format("%.2f", dollares)}"
+        t = "$ #{ format("%.2f", dollares)}"
       else
-        total = "$ #{ format("%.2f", -dollares)}"
+        t = "$ #{ format("%.2f", -dollares)}"
       end
     end
-    total
+    return t
   end
 
 end

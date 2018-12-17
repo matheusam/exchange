@@ -18631,3 +18631,260 @@ Processing by HomeController#index as HTML
   Rendered home/index.html.erb within layouts/application (0.7ms)
 Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms)
   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTransaction Create (1.3ms)[0m  [1m[32mINSERT INTO "transactions" ("amount", "currency", "transaction_type", "created_at", "updated_at", "quotation") VALUES (?, ?, ?, ?, ?, ?)[0m  [["amount", 15.0], ["currency", "real"], ["transaction_type", "buy"], ["created_at", "2018-12-17 19:34:48.601333"], ["updated_at", "2018-12-17 19:34:48.601333"], ["quotation", 4.0]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2018-12-17 17:34:48 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  Rendered home/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 158ms (Views: 148.7ms | ActiveRecord: 0.2ms)
+Started GET "/transactions/1" for 127.0.0.1 at 2018-12-17 17:34:48 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 6ms (Views: 2.6ms | ActiveRecord: 0.2ms)
+Started DELETE "/transactions/1" for 127.0.0.1 at 2018-12-17 17:34:48 -0200
+Processing by TransactionsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTransaction Destroy (0.1ms)[0m  [1m[31mDELETE FROM "transactions" WHERE "transactions"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/" for 127.0.0.1 at 2018-12-17 17:34:48 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTransaction Create (0.2ms)[0m  [1m[32mINSERT INTO "transactions" ("amount", "currency", "transaction_type", "created_at", "updated_at", "quotation") VALUES (?, ?, ?, ?, ?, ?)[0m  [["amount", 15.0], ["currency", "real"], ["transaction_type", "buy"], ["created_at", "2018-12-17 19:34:48.797505"], ["updated_at", "2018-12-17 19:34:48.797505"], ["quotation", 4.0]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2018-12-17 17:34:48 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+Started GET "/transactions/1" for 127.0.0.1 at 2018-12-17 17:34:48 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+Started GET "/transactions/1/edit" for 127.0.0.1 at 2018-12-17 17:34:48 -0200
+Processing by TransactionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering transactions/edit.html.erb within layouts/application
+  Rendered transactions/edit.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.1ms)
+Started PATCH "/transactions/1" for 127.0.0.1 at 2018-12-17 17:34:48 -0200
+Processing by TransactionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "transaction"=>{"amount"=>"100", "currency"=>"dollar", "quotation"=>"3.89", "transaction_type"=>"sell"}, "commit"=>"Editar", "id"=>"1"}
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTransaction Update (0.1ms)[0m  [1m[33mUPDATE "transactions" SET "amount" = ?, "currency" = ?, "quotation" = ?, "transaction_type" = ?, "updated_at" = ? WHERE "transactions"."id" = ?[0m  [["amount", 100.0], ["currency", "dollar"], ["quotation", 3.89], ["transaction_type", "sell"], ["updated_at", "2018-12-17 19:34:48.831241"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/transactions/1
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/transactions/1" for 127.0.0.1 at 2018-12-17 17:34:48 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTransaction Create (0.2ms)[0m  [1m[32mINSERT INTO "transactions" ("amount", "currency", "transaction_type", "created_at", "updated_at", "quotation") VALUES (?, ?, ?, ?, ?, ?)[0m  [["amount", 15.0], ["currency", "real"], ["transaction_type", "buy"], ["created_at", "2018-12-17 19:34:48.845506"], ["updated_at", "2018-12-17 19:34:48.845506"], ["quotation", 4.0]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2018-12-17 17:34:48 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+Started GET "/transactions/1" for 127.0.0.1 at 2018-12-17 17:34:48 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.1ms)
+Started GET "/transactions/1/edit" for 127.0.0.1 at 2018-12-17 17:34:48 -0200
+Processing by TransactionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering transactions/edit.html.erb within layouts/application
+  Rendered transactions/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+Started PATCH "/transactions/1" for 127.0.0.1 at 2018-12-17 17:34:48 -0200
+Processing by TransactionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "transaction"=>{"amount"=>"", "currency"=>"real", "quotation"=>"", "transaction_type"=>"buy"}, "commit"=>"Editar", "id"=>"1"}
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendering transactions/update.html.erb within layouts/application
+  Rendered transactions/update.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 8ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2018-12-17 17:34:48 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2018-12-17 17:34:48 -0200
+Processing by TransactionsController#new as HTML
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+Started POST "/transactions" for 127.0.0.1 at 2018-12-17 17:34:48 -0200
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "transaction"=>{"amount"=>"100", "currency"=>"dollar", "quotation"=>"3.89", "transaction_type"=>"sell"}, "commit"=>"Cadastrar"}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTransaction Create (0.3ms)[0m  [1m[32mINSERT INTO "transactions" ("amount", "currency", "transaction_type", "created_at", "updated_at", "quotation") VALUES (?, ?, ?, ?, ?, ?)[0m  [["amount", 100.0], ["currency", "dollar"], ["transaction_type", "sell"], ["created_at", "2018-12-17 19:34:48.898504"], ["updated_at", "2018-12-17 19:34:48.898504"], ["quotation", 3.89]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/transactions/1
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+Started GET "/transactions/1" for 127.0.0.1 at 2018-12-17 17:34:48 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2018-12-17 17:34:48 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2018-12-17 17:34:48 -0200
+Processing by TransactionsController#new as HTML
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+Started POST "/transactions" for 127.0.0.1 at 2018-12-17 17:34:48 -0200
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "transaction"=>{"amount"=>"", "currency"=>"", "quotation"=>"", "transaction_type"=>""}, "commit"=>"Cadastrar"}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTransaction Create (0.3ms)[0m  [1m[32mINSERT INTO "transactions" ("amount", "currency", "transaction_type", "created_at", "updated_at", "quotation") VALUES (?, ?, ?, ?, ?, ?)[0m  [["amount", 100.0], ["currency", "dollar"], ["transaction_type", "sell"], ["created_at", "2018-12-17 19:34:48.958913"], ["updated_at", "2018-12-17 19:34:48.958913"], ["quotation", 3.89]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2018-12-17 17:34:48 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms)
+Started GET "/transactions/1" for 127.0.0.1 at 2018-12-17 17:34:48 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTransaction Create (0.2ms)[0m  [1m[32mINSERT INTO "transactions" ("amount", "currency", "transaction_type", "created_at", "updated_at", "quotation") VALUES (?, ?, ?, ?, ?, ?)[0m  [["amount", 100.0], ["currency", "dollar"], ["transaction_type", "sell"], ["created_at", "2018-12-17 19:34:48.983542"], ["updated_at", "2018-12-17 19:34:48.983542"], ["quotation", 3.89]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2018-12-17 17:34:48 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+Started GET "/transactions/1" for 127.0.0.1 at 2018-12-17 17:34:48 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.1ms)
+Started GET "/" for 127.0.0.1 at 2018-12-17 17:34:48 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2018-12-17 17:34:49 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTransaction Create (0.2ms)[0m  [1m[32mINSERT INTO "transactions" ("amount", "currency", "transaction_type", "created_at", "updated_at", "quotation") VALUES (?, ?, ?, ?, ?, ?)[0m  [["amount", 100.0], ["currency", "dollar"], ["transaction_type", "sell"], ["created_at", "2018-12-17 19:34:49.010347"], ["updated_at", "2018-12-17 19:34:49.010347"], ["quotation", 3.89]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2018-12-17 17:34:49 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTransaction Create (0.2ms)[0m  [1m[32mINSERT INTO "transactions" ("amount", "currency", "transaction_type", "created_at", "updated_at", "quotation") VALUES (?, ?, ?, ?, ?, ?)[0m  [["amount", 100.0], ["currency", "dollar"], ["transaction_type", "sell"], ["created_at", "2018-12-17 19:34:49.030481"], ["updated_at", "2018-12-17 19:34:49.030481"], ["quotation", 3.89]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTransaction Create (0.1ms)[0m  [1m[32mINSERT INTO "transactions" ("amount", "currency", "transaction_type", "created_at", "updated_at", "quotation") VALUES (?, ?, ?, ?, ?, ?)[0m  [["amount", 150.0], ["currency", "real"], ["transaction_type", "buy"], ["created_at", "2018-12-17 19:34:49.031950"], ["updated_at", "2018-12-17 19:34:49.031950"], ["quotation", 4.0]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2018-12-17 17:34:49 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2018-12-17 17:34:49 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m

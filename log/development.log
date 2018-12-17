@@ -8410,3 +8410,286 @@ Processing by TransactionsController#show as HTML
 Completed 200 OK in 30ms (Views: 27.0ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-12-15 15:50:01 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 31ms (Views: 28.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/transactions/new" for 127.0.0.1 at 2018-12-15 15:50:06 -0200
+Processing by TransactionsController#new as HTML
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/new.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 41ms (Views: 37.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-15 15:50:09 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 33ms (Views: 29.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/transactions/1" for 127.0.0.1 at 2018-12-15 15:50:11 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:21
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 32ms (Views: 28.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-15 15:50:13 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-15 16:50:28 -0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/harry/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 231ms (Views: 217.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-17 17:35:02 -0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/harry/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 212ms (Views: 200.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-17 20:31:23 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 48ms (Views: 41.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-17 20:31:25 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-17 20:31:39 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 37ms (Views: 32.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/transactions/1" for 127.0.0.1 at 2018-12-17 20:31:42 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:21
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 32ms (Views: 28.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/transactions/1" for 127.0.0.1 at 2018-12-17 20:31:48 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:21
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 35ms (Views: 31.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-17 20:31:50 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-17 21:32:24 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 37ms (Views: 32.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/transactions/1" for 127.0.0.1 at 2018-12-17 21:32:27 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:21
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 30ms (Views: 22.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-17 21:32:33 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 34ms (Views: 31.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/transactions/new" for 127.0.0.1 at 2018-12-17 21:32:41 -0200
+Processing by TransactionsController#new as HTML
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/new.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 49ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2018-12-17 21:32:44 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PTOGB9cRn7kvQc+Qub4WvRhJpwx8AGD/sGmCluVZB4Uv/AED5Q1Wh0DAV0cKYetNYp+lCdzCdRC/EuZ6VWia9g==", "transaction"=>{"amount"=>"", "currency"=>"", "quotation"=>"", "transaction_type"=>""}, "commit"=>"Cadastrar"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:12
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/new.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 45ms (Views: 37.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2018-12-17 21:32:45 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PTOGB9cRn7kvQc+Qub4WvRhJpwx8AGD/sGmCluVZB4Uv/AED5Q1Wh0DAV0cKYetNYp+lCdzCdRC/EuZ6VWia9g==", "transaction"=>{"amount"=>"", "currency"=>"", "quotation"=>"", "transaction_type"=>""}, "commit"=>"Cadastrar"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:12
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 37ms (Views: 31.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2018-12-17 21:32:51 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PTOGB9cRn7kvQc+Qub4WvRhJpwx8AGD/sGmCluVZB4Uv/AED5Q1Wh0DAV0cKYetNYp+lCdzCdRC/EuZ6VWia9g==", "transaction"=>{"amount"=>"123", "currency"=>"dollar", "quotation"=>"123", "transaction_type"=>"buy"}, "commit"=>"Cadastrar"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:12
+  [1m[36mTransaction Create (0.5ms)[0m  [1m[32mINSERT INTO "transactions" ("amount", "currency", "transaction_type", "created_at", "updated_at", "quotation") VALUES (?, ?, ?, ?, ?, ?)[0m  [["amount", 123.0], ["currency", "dollar"], ["transaction_type", "buy"], ["created_at", "2018-12-17 23:32:51.749256"], ["updated_at", "2018-12-17 23:32:51.749256"], ["quotation", 123.0]]
+  ↳ app/controllers/transactions_controller.rb:12
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/transactions_controller.rb:12
+Redirected to http://localhost:3000/transactions/3
+Completed 200 OK in 15ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/transactions/3" for 127.0.0.1 at 2018-12-17 21:32:51 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:21
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 30ms (Views: 26.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/transactions/3/edit" for 127.0.0.1 at 2018-12-17 21:32:58 -0200
+Processing by TransactionsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:25
+  Rendering transactions/edit.html.erb within layouts/application
+  Rendered transactions/edit.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 30ms (Views: 27.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-17 21:33:01 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/transactions/3" for 127.0.0.1 at 2018-12-17 21:33:03 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:21
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/transactions/3" for 127.0.0.1 at 2018-12-17 21:33:05 -0200
+Processing by TransactionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JwziT3B543CZ3oChb8q6RDPn8IcJu/gHWuoGYPhVL9wxlTMSpHuGzCuxSsZhE6xLmfKc0mBCuVR9ha04nbpy7Q==", "id"=>"3"}
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:38
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:39
+  [1m[36mTransaction Destroy (1.2ms)[0m  [1m[31mDELETE FROM "transactions" WHERE "transactions"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/transactions_controller.rb:39
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/transactions_controller.rb:39
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-17 21:33:05 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 36ms (Views: 33.7ms | ActiveRecord: 0.6ms)
+
+
