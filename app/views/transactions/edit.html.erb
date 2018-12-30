@@ -1,6 +1,9 @@
 <h1>Editar transação</h1>
 <p id="notice"><%= flash[:notice] %></p>
-  <%= link_to "Voltar", root_path %>
+<%= link_to "Voltar", root_path %>
+  <% if @transaction.errors.full_messages.any? %>
+    <p>Você deve informar todos os dados da transação</p>
+  <% end %>
   <%= form_with model: @transaction do |form| %>
   <h3>Quantidade</h3>
   <%= form.text_field :amount, placeholder: "Quantidade" %>
@@ -11,6 +14,8 @@
   <%= form.text_field :quotation, placeholder: "Cotação" %>
   <%= form.label :transaction_type, 'Tipo' %>
   <%= form.select :transaction_type,  [['Compra', 'buy'], ['Venda', 'sell']], :include_blank => "Escolha o Tipo" %>
+  <%= form.label :user_id, 'Usuário' %>
+  <%= form.collection_select(:user_id, User.all, :id, :email) %>
 
   <%= form.submit "Editar" %>
 <% end %>

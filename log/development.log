@@ -8693,3 +8693,2080 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 36ms (Views: 33.7ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-12-17 21:34:57 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/transactions/new" for 127.0.0.1 at 2018-12-17 21:37:38 -0200
+Processing by TransactionsController#new as HTML
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 37ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-17 21:37:40 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 25ms (Views: 22.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/transactions/1" for 127.0.0.1 at 2018-12-17 21:37:42 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:21
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 26ms (Views: 23.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-18 17:27:34 -0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/harry/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (30.2ms)
+Completed 200 OK in 245ms (Views: 222.2ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/transactions/1" for 127.0.0.1 at 2018-12-18 17:27:39 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:21
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 32ms (Views: 23.1ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/transactions/1" for 127.0.0.1 at 2018-12-18 17:27:48 -0200
+Processing by TransactionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"r7fc0HIudDyOlYazrcoYKT/GkFbUxq7KnfAq+Dp7H+K5Lg2NpiwRgDz6TNSjEw4mldP8A70/75m6n4GgX5RC0w==", "id"=>"1"}
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:38
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:39
+  [1m[36mTransaction Destroy (0.5ms)[0m  [1m[31mDELETE FROM "transactions" WHERE "transactions"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/transactions_controller.rb:39
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/transactions_controller.rb:39
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-18 17:27:48 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/transactions/2" for 127.0.0.1 at 2018-12-18 17:27:54 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:21
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 31ms (Views: 27.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/transactions/2/edit" for 127.0.0.1 at 2018-12-18 17:27:55 -0200
+Processing by TransactionsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:25
+  Rendering transactions/edit.html.erb within layouts/application
+  Rendered transactions/edit.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 33ms (Views: 29.0ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/transactions/2" for 127.0.0.1 at 2018-12-18 17:28:02 -0200
+Processing by TransactionsController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wqQl7k86faWrql3W6hqco5RrDQmHeNIRYa4J/3xyFx5zSnh1Mpbg9dMvHiC1vlck1JRw11uIT+myE2YwCFlhJg==", "transaction"=>{"amount"=>"21.0", "currency"=>"real", "quotation"=>"12.0", "transaction_type"=>"sell"}, "commit"=>"Editar", "id"=>"2"}
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:30
+  [1m[36mTransaction Update (3.2ms)[0m  [1m[33mUPDATE "transactions" SET "currency" = ?, "quotation" = ?, "transaction_type" = ?, "updated_at" = ? WHERE "transactions"."id" = ?[0m  [["currency", "real"], ["quotation", 12.0], ["transaction_type", "sell"], ["updated_at", "2018-12-18 19:28:02.769686"], ["id", 2]]
+  ↳ app/controllers/transactions_controller.rb:30
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/transactions_controller.rb:30
+Redirected to http://localhost:3000/transactions/2
+Completed 200 OK in 19ms (ActiveRecord: 11.7ms)
+
+
+Started GET "/transactions/2" for 127.0.0.1 at 2018-12-18 17:28:02 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:21
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-18 17:28:11 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/transactions/2" for 127.0.0.1 at 2018-12-18 17:29:25 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:21
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 33ms (Views: 29.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-18 17:29:26 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 31ms (Views: 28.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-18 20:55:39 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-18 20:55:41 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 32ms (Views: 29.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/transactions/2" for 127.0.0.1 at 2018-12-18 20:55:50 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:21
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 28ms (Views: 25.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/transactions/2/edit" for 127.0.0.1 at 2018-12-18 20:56:05 -0200
+Processing by TransactionsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:25
+  Rendering transactions/edit.html.erb within layouts/application
+  Rendered transactions/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-18 20:56:11 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 31ms (Views: 28.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/transactions/new" for 127.0.0.1 at 2018-12-18 20:56:14 -0200
+Processing by TransactionsController#new as HTML
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-18 20:56:16 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 37ms (Views: 34.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/transactions/2" for 127.0.0.1 at 2018-12-18 20:56:18 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:21
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-18 20:56:19 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 32ms (Views: 28.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/transactions/2" for 127.0.0.1 at 2018-12-18 22:09:10 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:21
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 36ms (Views: 19.5ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/transactions/2" for 127.0.0.1 at 2018-12-18 22:09:27 -0200
+Processing by TransactionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ehBS7tBp8govjvapByltMqEnF3q1wPZL8mhMJBSr4fhsiYOzBGuXtp3hPM4J8Hs9CzJ7L9w5txjVB+d8cUS8yQ==", "id"=>"2"}
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:38
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:39
+  [1m[36mTransaction Destroy (1.1ms)[0m  [1m[31mDELETE FROM "transactions" WHERE "transactions"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/transactions_controller.rb:39
+  [1m[35m (7.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/transactions_controller.rb:39
+Redirected to http://localhost:3000/
+Completed 302 Found in 16ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-18 22:09:27 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/harry/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateUsers (20181226151239)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/harry/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20181226151239_create_users.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "name" varchar, "cpf" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181226151239_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181226151239"]]
+  ↳ /home/harry/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/harry/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to AddUserToTransactions (20181226172948)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/harry/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "transactions" ADD "user" varchar[0m
+  ↳ db/migrate/20181226172948_add_user_to_transactions.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181226172948"]]
+  ↳ /home/harry/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/harry/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/harry/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/harry/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/harry/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/harry/.rvm/gems/ruby-2.5.1/bin/rake:23
+Started GET "/" for 127.0.0.1 at 2018-12-26 15:34:34 -0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/harry/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 206ms (Views: 196.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/transactions/new" for 127.0.0.1 at 2018-12-26 15:34:37 -0200
+Processing by TransactionsController#new as HTML
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/new.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 50ms (Views: 31.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 15:34:40 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/transactions/new" for 127.0.0.1 at 2018-12-26 15:36:22 -0200
+Processing by TransactionsController#new as HTML
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 30ms (Views: 17.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 15:44:16 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/transactions/new" for 127.0.0.1 at 2018-12-26 15:44:17 -0200
+Processing by TransactionsController#new as HTML
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 33ms (Views: 30.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2018-12-26 15:44:28 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S5Q0XxI3efXXaP/IsKy1mz/HlTCctHsxaXjNFk5qJWxHFe10FDOKYRUsk7noARBaNx9LKkf2CT7Ocp0Mk/BYZQ==", "transaction"=>{"amount"=>"1", "currency"=>"dollar", "quotation"=>"112", "transaction_type"=>"buy", "user"=>"sell"}, "commit"=>"Cadastrar"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:12
+  [1m[36mTransaction Create (1.2ms)[0m  [1m[32mINSERT INTO "transactions" ("amount", "currency", "transaction_type", "created_at", "updated_at", "quotation", "user") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["amount", 1.0], ["currency", "dollar"], ["transaction_type", "buy"], ["created_at", "2018-12-26 17:44:28.118671"], ["updated_at", "2018-12-26 17:44:28.118671"], ["quotation", 112.0], ["user", "sell"]]
+  ↳ app/controllers/transactions_controller.rb:12
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/transactions_controller.rb:12
+Redirected to http://localhost:3000/transactions/1
+Completed 200 OK in 12ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/transactions/1" for 127.0.0.1 at 2018-12-26 15:44:28 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:21
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 26ms (Views: 21.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 17:00:48 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 31ms (Views: 27.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 17:00:52 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 38ms (Views: 36.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/transactions/1" for 127.0.0.1 at 2018-12-26 17:00:54 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:21
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+    18:   <h3>Data</h3>
+    19:     <p><%= @transaction.created_at.strftime('%d/%m/%Y') %></p>
+    20:   <h3>Usuário</h3>
+    21:     <p><%= @user.email %></p>
+  
+app/views/transactions/show.html.erb:21:in `_app_views_transactions_show_html_erb___4005346511521297905_70305194261620'
+Started GET "/transactions/1" for 127.0.0.1 at 2018-12-26 18:41:48 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:21
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `email' for "sell":String):
+    18:   <h3>Data</h3>
+    19:     <p><%= @transaction.created_at.strftime('%d/%m/%Y') %></p>
+    20:   <h3>Usuário</h3>
+    21:     <p><%= @transaction.user.email %></p>
+  
+app/views/transactions/show.html.erb:21:in `_app_views_transactions_show_html_erb___4005346511521297905_70305235400320'
+Started GET "/" for 127.0.0.1 at 2018-12-26 18:41:50 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/transactions/new" for 127.0.0.1 at 2018-12-26 18:41:52 -0200
+Processing by TransactionsController#new as HTML
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 31ms (Views: 29.8ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/harry/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to Fk (20181226204514)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/harry/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "transactions" ADD "user_id" integer[0m
+  ↳ db/migrate/20181226204514_fk.rb:3
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20181226204514_fk.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_transactions_on_user_id" ON "transactions" ("user_id")[0m
+  ↳ db/migrate/20181226204514_fk.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181226204514"]]
+  ↳ /home/harry/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/harry/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/harry/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/harry/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/harry/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/harry/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2018-12-28 15:10:40 -0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/harry/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 237ms (Views: 225.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/transactions/1" for 127.0.0.1 at 2018-12-28 15:10:43 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:22
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 29ms (Views: 24.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-28 15:11:33 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/transactions/new" for 127.0.0.1 at 2018-12-28 15:11:34 -0200
+Processing by TransactionsController#new as HTML
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/new.html.erb within layouts/application (10.8ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    13:   <%= form.label :transaction_type, 'Tipo' %>
+    14:   <%= form.select :transaction_type,  [['Compra', 'buy'], ['Venda', 'sell']], :include_blank => "Escolha o Tipo" %>
+    15:   <%= form.label :user, 'Usuário' %>
+    16:   <%= form.collection_select :user_id, @transaction.user, :id, :email %>
+    17: 
+    18:   <%= form.submit "Cadastrar" %>
+    19: <% end %>
+  
+app/views/transactions/new.html.erb:16:in `block in _app_views_transactions_new_html_erb___4205405118969030355_70238419551020'
+app/views/transactions/new.html.erb:7:in `_app_views_transactions_new_html_erb___4205405118969030355_70238419551020'
+Started GET "/" for 127.0.0.1 at 2018-12-28 15:11:38 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/transactions/new" for 127.0.0.1 at 2018-12-28 15:11:42 -0200
+Processing by TransactionsController#new as HTML
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/new.html.erb within layouts/application (7.2ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    13:   <%= form.label :transaction_type, 'Tipo' %>
+    14:   <%= form.select :transaction_type,  [['Compra', 'buy'], ['Venda', 'sell']], :include_blank => "Escolha o Tipo" %>
+    15:   <%= form.label :user, 'Usuário' %>
+    16:   <%= form.collection_select :user_id, @transaction.user, :id, :email %>
+    17: 
+    18:   <%= form.submit "Cadastrar" %>
+    19: <% end %>
+  
+app/views/transactions/new.html.erb:16:in `block in _app_views_transactions_new_html_erb___4205405118969030355_70238423735000'
+app/views/transactions/new.html.erb:7:in `_app_views_transactions_new_html_erb___4205405118969030355_70238423735000'
+Started GET "/" for 127.0.0.1 at 2018-12-28 15:15:18 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 34ms (Views: 30.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-28 15:15:19 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 28ms (Views: 24.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/transactions/1" for 127.0.0.1 at 2018-12-28 15:15:20 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:22
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `email' for "sell":String):
+    18:   <h3>Data</h3>
+    19:     <p><%= @transaction.created_at.strftime('%d/%m/%Y') %></p>
+    20:   <h3>Usuário</h3>
+    21:     <p><%= @transaction.user.email %></p>
+  
+app/views/transactions/show.html.erb:21:in `_app_views_transactions_show_html_erb__2329200715111229846_70238421602000'
+Started GET "/" for 127.0.0.1 at 2018-12-28 15:15:35 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 33ms (Views: 30.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-30 09:48:17 -0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/harry/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 211ms (Views: 199.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-30 11:39:34 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 37ms (Views: 32.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/transactions/new" for 127.0.0.1 at 2018-12-30 11:39:37 -0200
+Processing by TransactionsController#new as HTML
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/new.html.erb within layouts/application (12.0ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    13:   <%= form.label :transaction_type, 'Tipo' %>
+    14:   <%= form.select :transaction_type,  [['Compra', 'buy'], ['Venda', 'sell']], :include_blank => "Escolha o Tipo" %>
+    15:   <%= form.label :user, 'Usuário' %>
+    16:   <%= form.collection_select :user_id, @transaction.user, :id, :email %>
+    17: 
+    18:   <%= form.submit "Cadastrar" %>
+    19: <% end %>
+  
+app/views/transactions/new.html.erb:16:in `block in _app_views_transactions_new_html_erb___2699191232297077600_69832512762740'
+app/views/transactions/new.html.erb:7:in `_app_views_transactions_new_html_erb___2699191232297077600_69832512762740'
+Started GET "/transactions/new" for 127.0.0.1 at 2018-12-30 12:58:13 -0200
+Processing by TransactionsController#new as HTML
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/new.html.erb:16
+  Rendered transactions/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 49ms (Views: 46.2ms | ActiveRecord: 1.3ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "cpf", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "teste@teste.com.br"], ["name", "Fulano Sicrano"], ["cpf", "451.894.135-78"], ["created_at", "2018-12-30 14:59:39.154673"], ["updated_at", "2018-12-30 14:59:39.154673"]]
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/transactions/new" for 127.0.0.1 at 2018-12-30 13:00:10 -0200
+Processing by TransactionsController#new as HTML
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/new.html.erb:16
+  Rendered transactions/new.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 39ms (Views: 36.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-30 13:04:22 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 26ms (Views: 23.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/transactions/1" for 127.0.0.1 at 2018-12-30 13:04:24 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:22
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 41ms (Views: 27.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/transactions/1/edit" for 127.0.0.1 at 2018-12-30 13:04:35 -0200
+Processing by TransactionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:26
+  Rendering transactions/edit.html.erb within layouts/application
+  Rendered transactions/edit.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 32ms (Views: 29.1ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/transactions/1" for 127.0.0.1 at 2018-12-30 13:04:43 -0200
+Processing by TransactionsController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Pz3jgzFzdWroB6UY8jMBlztD0bJ/N/YO4f4+kPignP3GNPt8NPkhENeLiCq2i0fH9fAjAQPGmUM2UYB1SZFjpg==", "transaction"=>{"amount"=>"1.0", "currency"=>"dollar", "quotation"=>"112.0", "transaction_type"=>"buy"}, "commit"=>"Editar", "id"=>"1"}
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:31
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/transactions_controller.rb:31
+Redirected to http://localhost:3000/transactions/1
+Completed 200 OK in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/transactions/1" for 127.0.0.1 at 2018-12-30 13:04:43 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:22
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-30 13:04:46 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 26ms (Views: 23.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/transactions/new" for 127.0.0.1 at 2018-12-30 13:05:06 -0200
+Processing by TransactionsController#new as HTML
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/new.html.erb:16
+  Rendered transactions/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 29ms (Views: 26.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-30 13:05:09 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 33ms (Views: 30.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-30 13:16:50 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 46ms (Views: 42.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/transactions/new" for 127.0.0.1 at 2018-12-30 13:16:52 -0200
+Processing by TransactionsController#new as HTML
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/new.html.erb:16
+  Rendered transactions/new.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 48ms (Views: 41.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-30 13:16:59 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 34ms (Views: 31.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/transactions/1" for 127.0.0.1 at 2018-12-30 13:17:00 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:22
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:23
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 32ms (Views: 25.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-30 13:17:20 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 33ms (Views: 30.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/transactions/1" for 127.0.0.1 at 2018-12-30 13:17:23 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:22
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:23
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 29ms (Views: 24.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/transactions/1/edit" for 127.0.0.1 at 2018-12-30 13:17:24 -0200
+Processing by TransactionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:27
+  Rendering transactions/edit.html.erb within layouts/application
+  Rendered transactions/edit.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 32ms (Views: 28.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-30 14:07:30 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 37ms (Views: 32.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/transactions/1" for 127.0.0.1 at 2018-12-30 14:07:32 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:23
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:24
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 43ms (Views: 23.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/transactions/1/edit" for 127.0.0.1 at 2018-12-30 14:07:36 -0200
+Processing by TransactionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:28
+  Rendering transactions/edit.html.erb within layouts/application
+  Rendered transactions/edit.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 37ms (Views: 34.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-30 14:07:43 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/transactions/new" for 127.0.0.1 at 2018-12-30 14:07:45 -0200
+Processing by TransactionsController#new as HTML
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/new.html.erb:16
+  Rendered transactions/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2018-12-30 14:07:53 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GCl7xvauJyq3UMkZUrgjUflQLxQ8de4w56vmXbP7xgsJrqMkMSah17qRWx00u0RaJDeUXyoSuzbKj92kulKhrw==", "transaction"=>{"amount"=>"", "currency"=>"", "quotation"=>"", "transaction_type"=>"", "user_id"=>"1"}, "commit"=>"Cadastrar"}
+Unpermitted parameter: :user_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:12
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/new.html.erb within layouts/application (11.6ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    13:   <%= form.label :transaction_type, 'Tipo' %>
+    14:   <%= form.select :transaction_type,  [['Compra', 'buy'], ['Venda', 'sell']], :include_blank => "Escolha o Tipo" %>
+    15:   <%= form.label :user_id, 'Usuário' %>
+    16:   <%= form.collection_select(:user_id, @user, :id, :email) %>
+    17: 
+    18:   <%= form.submit "Cadastrar" %>
+    19: <% end %>
+  
+app/views/transactions/new.html.erb:16:in `block in _app_views_transactions_new_html_erb___2699191232297077600_69832481255020'
+app/views/transactions/new.html.erb:7:in `_app_views_transactions_new_html_erb___2699191232297077600_69832481255020'
+app/controllers/transactions_controller.rb:18:in `create'
+Started POST "/transactions" for 127.0.0.1 at 2018-12-30 14:07:55 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GCl7xvauJyq3UMkZUrgjUflQLxQ8de4w56vmXbP7xgsJrqMkMSah17qRWx00u0RaJDeUXyoSuzbKj92kulKhrw==", "transaction"=>{"amount"=>"", "currency"=>"", "quotation"=>"", "transaction_type"=>"", "user_id"=>"1"}, "commit"=>"Cadastrar"}
+Unpermitted parameter: :user_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:12
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/new.html.erb within layouts/application (9.8ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    13:   <%= form.label :transaction_type, 'Tipo' %>
+    14:   <%= form.select :transaction_type,  [['Compra', 'buy'], ['Venda', 'sell']], :include_blank => "Escolha o Tipo" %>
+    15:   <%= form.label :user_id, 'Usuário' %>
+    16:   <%= form.collection_select(:user_id, @user, :id, :email) %>
+    17: 
+    18:   <%= form.submit "Cadastrar" %>
+    19: <% end %>
+  
+app/views/transactions/new.html.erb:16:in `block in _app_views_transactions_new_html_erb___2699191232297077600_69832514961420'
+app/views/transactions/new.html.erb:7:in `_app_views_transactions_new_html_erb___2699191232297077600_69832514961420'
+app/controllers/transactions_controller.rb:18:in `create'
+Started POST "/transactions" for 127.0.0.1 at 2018-12-30 14:07:56 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GCl7xvauJyq3UMkZUrgjUflQLxQ8de4w56vmXbP7xgsJrqMkMSah17qRWx00u0RaJDeUXyoSuzbKj92kulKhrw==", "transaction"=>{"amount"=>"", "currency"=>"", "quotation"=>"", "transaction_type"=>"", "user_id"=>"1"}, "commit"=>"Cadastrar"}
+Unpermitted parameter: :user_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:12
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/new.html.erb within layouts/application (11.7ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    13:   <%= form.label :transaction_type, 'Tipo' %>
+    14:   <%= form.select :transaction_type,  [['Compra', 'buy'], ['Venda', 'sell']], :include_blank => "Escolha o Tipo" %>
+    15:   <%= form.label :user_id, 'Usuário' %>
+    16:   <%= form.collection_select(:user_id, @user, :id, :email) %>
+    17: 
+    18:   <%= form.submit "Cadastrar" %>
+    19: <% end %>
+  
+app/views/transactions/new.html.erb:16:in `block in _app_views_transactions_new_html_erb___2699191232297077600_69832488410720'
+app/views/transactions/new.html.erb:7:in `_app_views_transactions_new_html_erb___2699191232297077600_69832488410720'
+app/controllers/transactions_controller.rb:18:in `create'
+Started POST "/transactions" for 127.0.0.1 at 2018-12-30 14:07:57 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GCl7xvauJyq3UMkZUrgjUflQLxQ8de4w56vmXbP7xgsJrqMkMSah17qRWx00u0RaJDeUXyoSuzbKj92kulKhrw==", "transaction"=>{"amount"=>"", "currency"=>"", "quotation"=>"", "transaction_type"=>"", "user_id"=>"1"}, "commit"=>"Cadastrar"}
+Unpermitted parameter: :user_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:12
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/new.html.erb within layouts/application (11.6ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    13:   <%= form.label :transaction_type, 'Tipo' %>
+    14:   <%= form.select :transaction_type,  [['Compra', 'buy'], ['Venda', 'sell']], :include_blank => "Escolha o Tipo" %>
+    15:   <%= form.label :user_id, 'Usuário' %>
+    16:   <%= form.collection_select(:user_id, @user, :id, :email) %>
+    17: 
+    18:   <%= form.submit "Cadastrar" %>
+    19: <% end %>
+  
+app/views/transactions/new.html.erb:16:in `block in _app_views_transactions_new_html_erb___2699191232297077600_69832510810160'
+app/views/transactions/new.html.erb:7:in `_app_views_transactions_new_html_erb___2699191232297077600_69832510810160'
+app/controllers/transactions_controller.rb:18:in `create'
+Started GET "/transactions/new" for 127.0.0.1 at 2018-12-30 14:07:59 -0200
+Processing by TransactionsController#new as HTML
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/new.html.erb:16
+  Rendered transactions/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/transactions/new" for 127.0.0.1 at 2018-12-30 14:10:34 -0200
+Processing by TransactionsController#new as HTML
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/new.html.erb:16
+  Rendered transactions/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 33ms (Views: 31.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2018-12-30 14:10:38 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c/9VedEHmakvbqZQ/8yuZPfUTNNGnb+8NGGilaSxH3L214Fen91rDEd2m/Zo0+O6i3Jrbxee0ADkYowqlIIR0g==", "transaction"=>{"amount"=>"", "currency"=>"", "quotation"=>"", "transaction_type"=>"", "user_id"=>"1"}, "commit"=>"Cadastrar"}
+Unpermitted parameter: :user_id
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:12
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/new.html.erb within layouts/application (11.3ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    13:   <%= form.label :transaction_type, 'Tipo' %>
+    14:   <%= form.select :transaction_type,  [['Compra', 'buy'], ['Venda', 'sell']], :include_blank => "Escolha o Tipo" %>
+    15:   <%= form.label :user_id, 'Usuário' %>
+    16:   <%= form.collection_select(:user_id, @user, :id, :email) %>
+    17: 
+    18:   <%= form.submit "Cadastrar" %>
+    19: <% end %>
+  
+app/views/transactions/new.html.erb:16:in `block in _app_views_transactions_new_html_erb___2699191232297077600_69832487212220'
+app/views/transactions/new.html.erb:7:in `_app_views_transactions_new_html_erb___2699191232297077600_69832487212220'
+app/controllers/transactions_controller.rb:18:in `create'
+Started POST "/transactions" for 127.0.0.1 at 2018-12-30 14:10:39 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c/9VedEHmakvbqZQ/8yuZPfUTNNGnb+8NGGilaSxH3L214Fen91rDEd2m/Zo0+O6i3Jrbxee0ADkYowqlIIR0g==", "transaction"=>{"amount"=>"", "currency"=>"", "quotation"=>"", "transaction_type"=>"", "user_id"=>"1"}, "commit"=>"Cadastrar"}
+Unpermitted parameter: :user_id
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:12
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/new.html.erb within layouts/application (15.9ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    13:   <%= form.label :transaction_type, 'Tipo' %>
+    14:   <%= form.select :transaction_type,  [['Compra', 'buy'], ['Venda', 'sell']], :include_blank => "Escolha o Tipo" %>
+    15:   <%= form.label :user_id, 'Usuário' %>
+    16:   <%= form.collection_select(:user_id, @user, :id, :email) %>
+    17: 
+    18:   <%= form.submit "Cadastrar" %>
+    19: <% end %>
+  
+app/views/transactions/new.html.erb:16:in `block in _app_views_transactions_new_html_erb___2699191232297077600_69832494418480'
+app/views/transactions/new.html.erb:7:in `_app_views_transactions_new_html_erb___2699191232297077600_69832494418480'
+app/controllers/transactions_controller.rb:18:in `create'
+Started POST "/transactions" for 127.0.0.1 at 2018-12-30 14:10:45 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c/9VedEHmakvbqZQ/8yuZPfUTNNGnb+8NGGilaSxH3L214Fen91rDEd2m/Zo0+O6i3Jrbxee0ADkYowqlIIR0g==", "transaction"=>{"amount"=>"", "currency"=>"real", "quotation"=>"", "transaction_type"=>"buy", "user_id"=>"1"}, "commit"=>"Cadastrar"}
+Unpermitted parameter: :user_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:12
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/new.html.erb within layouts/application (9.9ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    13:   <%= form.label :transaction_type, 'Tipo' %>
+    14:   <%= form.select :transaction_type,  [['Compra', 'buy'], ['Venda', 'sell']], :include_blank => "Escolha o Tipo" %>
+    15:   <%= form.label :user_id, 'Usuário' %>
+    16:   <%= form.collection_select(:user_id, @user, :id, :email) %>
+    17: 
+    18:   <%= form.submit "Cadastrar" %>
+    19: <% end %>
+  
+app/views/transactions/new.html.erb:16:in `block in _app_views_transactions_new_html_erb___2699191232297077600_69832512286500'
+app/views/transactions/new.html.erb:7:in `_app_views_transactions_new_html_erb___2699191232297077600_69832512286500'
+app/controllers/transactions_controller.rb:18:in `create'
+Started POST "/transactions" for 127.0.0.1 at 2018-12-30 14:10:46 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c/9VedEHmakvbqZQ/8yuZPfUTNNGnb+8NGGilaSxH3L214Fen91rDEd2m/Zo0+O6i3Jrbxee0ADkYowqlIIR0g==", "transaction"=>{"amount"=>"", "currency"=>"real", "quotation"=>"", "transaction_type"=>"buy", "user_id"=>"1"}, "commit"=>"Cadastrar"}
+Unpermitted parameter: :user_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:12
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/new.html.erb within layouts/application (10.2ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    13:   <%= form.label :transaction_type, 'Tipo' %>
+    14:   <%= form.select :transaction_type,  [['Compra', 'buy'], ['Venda', 'sell']], :include_blank => "Escolha o Tipo" %>
+    15:   <%= form.label :user_id, 'Usuário' %>
+    16:   <%= form.collection_select(:user_id, @user, :id, :email) %>
+    17: 
+    18:   <%= form.submit "Cadastrar" %>
+    19: <% end %>
+  
+app/views/transactions/new.html.erb:16:in `block in _app_views_transactions_new_html_erb___2699191232297077600_69832514654440'
+app/views/transactions/new.html.erb:7:in `_app_views_transactions_new_html_erb___2699191232297077600_69832514654440'
+app/controllers/transactions_controller.rb:18:in `create'
+Started POST "/transactions" for 127.0.0.1 at 2018-12-30 14:10:46 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c/9VedEHmakvbqZQ/8yuZPfUTNNGnb+8NGGilaSxH3L214Fen91rDEd2m/Zo0+O6i3Jrbxee0ADkYowqlIIR0g==", "transaction"=>{"amount"=>"", "currency"=>"real", "quotation"=>"", "transaction_type"=>"buy", "user_id"=>"1"}, "commit"=>"Cadastrar"}
+Unpermitted parameter: :user_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:12
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/new.html.erb within layouts/application (8.5ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    13:   <%= form.label :transaction_type, 'Tipo' %>
+    14:   <%= form.select :transaction_type,  [['Compra', 'buy'], ['Venda', 'sell']], :include_blank => "Escolha o Tipo" %>
+    15:   <%= form.label :user_id, 'Usuário' %>
+    16:   <%= form.collection_select(:user_id, @user, :id, :email) %>
+    17: 
+    18:   <%= form.submit "Cadastrar" %>
+    19: <% end %>
+  
+app/views/transactions/new.html.erb:16:in `block in _app_views_transactions_new_html_erb___2699191232297077600_69832486897500'
+app/views/transactions/new.html.erb:7:in `_app_views_transactions_new_html_erb___2699191232297077600_69832486897500'
+app/controllers/transactions_controller.rb:18:in `create'
+Started POST "/transactions" for 127.0.0.1 at 2018-12-30 14:10:46 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c/9VedEHmakvbqZQ/8yuZPfUTNNGnb+8NGGilaSxH3L214Fen91rDEd2m/Zo0+O6i3Jrbxee0ADkYowqlIIR0g==", "transaction"=>{"amount"=>"", "currency"=>"real", "quotation"=>"", "transaction_type"=>"buy", "user_id"=>"1"}, "commit"=>"Cadastrar"}
+Unpermitted parameter: :user_id
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:12
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/new.html.erb within layouts/application (9.6ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    13:   <%= form.label :transaction_type, 'Tipo' %>
+    14:   <%= form.select :transaction_type,  [['Compra', 'buy'], ['Venda', 'sell']], :include_blank => "Escolha o Tipo" %>
+    15:   <%= form.label :user_id, 'Usuário' %>
+    16:   <%= form.collection_select(:user_id, @user, :id, :email) %>
+    17: 
+    18:   <%= form.submit "Cadastrar" %>
+    19: <% end %>
+  
+app/views/transactions/new.html.erb:16:in `block in _app_views_transactions_new_html_erb___2699191232297077600_69832493694340'
+app/views/transactions/new.html.erb:7:in `_app_views_transactions_new_html_erb___2699191232297077600_69832493694340'
+app/controllers/transactions_controller.rb:18:in `create'
+Started GET "/" for 127.0.0.1 at 2018-12-30 14:12:21 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/transactions/1" for 127.0.0.1 at 2018-12-30 14:12:22 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:23
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:24
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 25ms (Views: 20.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/transactions/1/edit" for 127.0.0.1 at 2018-12-30 14:12:25 -0200
+Processing by TransactionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:28
+  Rendering transactions/edit.html.erb within layouts/application
+  Rendered transactions/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 27ms (Views: 24.2ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/transactions/1" for 127.0.0.1 at 2018-12-30 14:12:28 -0200
+Processing by TransactionsController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NWWstDoXkSLLktI+vcAiwkeKI2fHGYlZyahLcTkI/OXMbLRLP53FWPQe/wz5eGSSiTnR1Lvo5hQeB/WUiDkDvg==", "transaction"=>{"amount"=>"1.0", "currency"=>"dollar", "quotation"=>"112.0", "transaction_type"=>"buy"}, "commit"=>"Editar", "id"=>"1"}
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:34
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/transactions_controller.rb:34
+Redirected to http://localhost:3000/transactions/1
+Completed 200 OK in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/transactions/1" for 127.0.0.1 at 2018-12-30 14:12:28 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:23
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:24
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 28ms (Views: 24.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/transactions/1/edit" for 127.0.0.1 at 2018-12-30 14:12:29 -0200
+Processing by TransactionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:28
+  Rendering transactions/edit.html.erb within layouts/application
+  Rendered transactions/edit.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 36ms (Views: 32.4ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/transactions/1" for 127.0.0.1 at 2018-12-30 14:12:33 -0200
+Processing by TransactionsController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gUL9gb49rHv1jkl0elzyj7rXg08H4oh6RkxeS5snX794S+V+u7f4AcoCZEY+5LTfdGRx/HsT5zeR4+CuKhag5A==", "transaction"=>{"amount"=>"", "currency"=>"dollar", "quotation"=>"112.0", "transaction_type"=>"buy"}, "commit"=>"Editar", "id"=>"1"}
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:34
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:34
+Redirected to http://localhost:3000/transactions/1
+Completed 200 OK in 9ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/transactions/1" for 127.0.0.1 at 2018-12-30 14:12:33 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:23
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:24
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 28ms (Views: 24.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/transactions/1/edit" for 127.0.0.1 at 2018-12-30 14:12:38 -0200
+Processing by TransactionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:28
+  Rendering transactions/edit.html.erb within layouts/application
+  Rendered transactions/edit.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 29ms (Views: 25.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-30 14:12:40 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 28ms (Views: 25.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/transactions/new" for 127.0.0.1 at 2018-12-30 14:12:41 -0200
+Processing by TransactionsController#new as HTML
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/new.html.erb:16
+  Rendered transactions/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/transactions/new" for 127.0.0.1 at 2018-12-30 14:19:58 -0200
+Processing by TransactionsController#new as HTML
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/new.html.erb:16
+  Rendered transactions/new.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 58ms (Views: 38.1ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2018-12-30 14:20:11 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oMdBcX35reV0b1hdWBbEeRzRmv18jvyLXOr3HjyEZeAl75VWMyNfQBx3ZfvPCYmnYHe9QS2NkzeM6dmhDLdrQA==", "transaction"=>{"amount"=>"", "currency"=>"real", "quotation"=>"", "transaction_type"=>"buy", "user_id"=>"1"}, "commit"=>"Cadastrar"}
+Unpermitted parameter: :user_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:11
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/new.html.erb:16
+  Rendered transactions/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 40ms (Views: 31.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2018-12-30 14:20:12 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oMdBcX35reV0b1hdWBbEeRzRmv18jvyLXOr3HjyEZeAl75VWMyNfQBx3ZfvPCYmnYHe9QS2NkzeM6dmhDLdrQA==", "transaction"=>{"amount"=>"", "currency"=>"real", "quotation"=>"", "transaction_type"=>"buy", "user_id"=>"1"}, "commit"=>"Cadastrar"}
+Unpermitted parameter: :user_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:11
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/new.html.erb:16
+  Rendered transactions/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 39ms (Views: 32.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2018-12-30 14:20:12 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oMdBcX35reV0b1hdWBbEeRzRmv18jvyLXOr3HjyEZeAl75VWMyNfQBx3ZfvPCYmnYHe9QS2NkzeM6dmhDLdrQA==", "transaction"=>{"amount"=>"", "currency"=>"real", "quotation"=>"", "transaction_type"=>"buy", "user_id"=>"1"}, "commit"=>"Cadastrar"}
+Unpermitted parameter: :user_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:11
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/new.html.erb:16
+  Rendered transactions/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 34ms (Views: 28.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-30 14:20:13 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 26ms (Views: 23.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/transactions/1" for 127.0.0.1 at 2018-12-30 14:20:15 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:22
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:23
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 35ms (Views: 29.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/transactions/1/edit" for 127.0.0.1 at 2018-12-30 14:20:19 -0200
+Processing by TransactionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:27
+  Rendering transactions/edit.html.erb within layouts/application
+  Rendered transactions/edit.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 33ms (Views: 30.0ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/transactions/1" for 127.0.0.1 at 2018-12-30 14:20:21 -0200
+Processing by TransactionsController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zNik/XEkGw+bpJVtrwYs7Lar1KDJJAfjbGLvptmUqcI10bwCdK5PdaQouF/rvmq8eBgmE7XVaK67zVFDaKVWmQ==", "transaction"=>{"amount"=>"1.0", "currency"=>"dollar", "quotation"=>"112.0", "transaction_type"=>"buy"}, "commit"=>"Editar", "id"=>"1"}
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:31
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:33
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/transactions_controller.rb:33
+Redirected to http://localhost:3000/transactions/1
+Completed 200 OK in 6ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/transactions/1" for 127.0.0.1 at 2018-12-30 14:20:21 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:22
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:23
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 26ms (Views: 22.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-30 14:20:28 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/transactions/1" for 127.0.0.1 at 2018-12-30 14:20:37 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:22
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:23
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 31ms (Views: 26.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-30 14:20:41 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/transactions/1" for 127.0.0.1 at 2018-12-30 14:22:47 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:22
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:23
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 36ms (Views: 32.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-30 14:22:48 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 33ms (Views: 30.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/transactions/1" for 127.0.0.1 at 2018-12-30 14:51:24 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:23
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:24
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 51ms (Views: 24.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/transactions/1/edit" for 127.0.0.1 at 2018-12-30 14:51:25 -0200
+Processing by TransactionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:28
+  Rendering transactions/edit.html.erb within layouts/application
+  Rendered transactions/edit.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 32ms (Views: 29.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/transactions/1/edit" for 127.0.0.1 at 2018-12-30 14:52:36 -0200
+Processing by TransactionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:28
+  Rendering transactions/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/edit.html.erb:18
+  Rendered transactions/edit.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 36ms (Views: 32.3ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/transactions/1" for 127.0.0.1 at 2018-12-30 14:54:44 -0200
+Processing by TransactionsController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K57skE/PW1P9vDLonz0bdquIk2byfwAepMQS2T24vbuutji3ARWp9pWkD04IIlao1y602qN8b6J0xzxmDYuzGw==", "transaction"=>{"amount"=>"", "currency"=>"dollar", "quotation"=>"112.0", "transaction_type"=>"buy", "user_id"=>"1"}, "commit"=>"Editar", "id"=>"1"}
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:33
+Unpermitted parameter: :user_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:35
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:35
+Redirected to http://localhost:3000/transactions/1
+Completed 200 OK in 30ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/transactions/1" for 127.0.0.1 at 2018-12-30 14:54:44 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:24
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:25
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 28ms (Views: 16.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/transactions/1/edit" for 127.0.0.1 at 2018-12-30 14:54:49 -0200
+Processing by TransactionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:29
+  Rendering transactions/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/edit.html.erb:18
+  Rendered transactions/edit.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 29ms (Views: 25.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-30 15:46:05 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 34ms (Views: 30.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/transactions/1" for 127.0.0.1 at 2018-12-30 15:46:06 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:24
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:25
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 44ms (Views: 22.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/transactions/1/edit" for 127.0.0.1 at 2018-12-30 15:46:11 -0200
+Processing by TransactionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:29
+  Rendering transactions/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/edit.html.erb:18
+  Rendered transactions/edit.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 30ms (Views: 26.6ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/transactions/1" for 127.0.0.1 at 2018-12-30 15:46:15 -0200
+Processing by TransactionsController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NV4qCi5ybJyGMwRTi79Gn4QGPa2X0EopHGlbf4M9MGbMVzL1K/g45rm/KWHPBwDPSrXPHushJWTLxuWaMgzPPQ==", "transaction"=>{"amount"=>"", "currency"=>"dollar", "quotation"=>"112.0", "transaction_type"=>"buy", "user_id"=>"1"}, "commit"=>"Editar", "id"=>"1"}
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:33
+Unpermitted parameter: :user_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:35
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:35
+Redirected to http://localhost:3000/transactions/1
+Completed 200 OK in 6ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/transactions/1" for 127.0.0.1 at 2018-12-30 15:46:15 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:24
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:25
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 28ms (Views: 24.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/transactions/1/edit" for 127.0.0.1 at 2018-12-30 15:46:19 -0200
+Processing by TransactionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:29
+  Rendering transactions/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/edit.html.erb:18
+  Rendered transactions/edit.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 43ms (Views: 39.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-30 15:46:21 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/transactions/new" for 127.0.0.1 at 2018-12-30 15:47:41 -0200
+Processing by TransactionsController#new as HTML
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/new.html.erb:17
+  Rendered transactions/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-30 15:47:46 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 43ms (Views: 40.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/transactions/1" for 127.0.0.1 at 2018-12-30 15:47:47 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:24
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:25
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 33ms (Views: 29.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-30 15:49:40 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "transactions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:20
+  Rendered home/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 50ms (Views: 47.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/transactions/new" for 127.0.0.1 at 2018-12-30 15:49:41 -0200
+Processing by TransactionsController#new as HTML
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/new.html.erb:16
+  Rendered transactions/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 30ms (Views: 27.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2018-12-30 15:49:55 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+30OnPkFG709wWktiYYaLGksap9QUpCb3tY+Dl9jolnq+tZ+Po2dQDAA+ynvhX0ntEvR1EY1xZ3z8gX3VsrF/Q==", "transaction"=>{"amount"=>"111", "currency"=>"real", "quotation"=>"2.2", "transaction_type"=>"buy", "user_id"=>"1"}, "commit"=>"Cadastrar"}
+Unpermitted parameter: :user_id
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/new.html.erb:16
+  Rendered transactions/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 51ms (Views: 42.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2018-12-30 15:49:58 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+30OnPkFG709wWktiYYaLGksap9QUpCb3tY+Dl9jolnq+tZ+Po2dQDAA+ynvhX0ntEvR1EY1xZ3z8gX3VsrF/Q==", "transaction"=>{"amount"=>"111", "currency"=>"real", "quotation"=>"2.2", "transaction_type"=>"buy", "user_id"=>"1"}, "commit"=>"Cadastrar"}
+Unpermitted parameter: :user_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/new.html.erb:16
+  Rendered transactions/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 37ms (Views: 30.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2018-12-30 15:49:58 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+30OnPkFG709wWktiYYaLGksap9QUpCb3tY+Dl9jolnq+tZ+Po2dQDAA+ynvhX0ntEvR1EY1xZ3z8gX3VsrF/Q==", "transaction"=>{"amount"=>"111", "currency"=>"real", "quotation"=>"2.2", "transaction_type"=>"buy", "user_id"=>"1"}, "commit"=>"Cadastrar"}
+Unpermitted parameter: :user_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/new.html.erb:16
+  Rendered transactions/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 37ms (Views: 31.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2018-12-30 15:49:59 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+30OnPkFG709wWktiYYaLGksap9QUpCb3tY+Dl9jolnq+tZ+Po2dQDAA+ynvhX0ntEvR1EY1xZ3z8gX3VsrF/Q==", "transaction"=>{"amount"=>"111", "currency"=>"real", "quotation"=>"2.2", "transaction_type"=>"buy", "user_id"=>"1"}, "commit"=>"Cadastrar"}
+Unpermitted parameter: :user_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/new.html.erb:16
+  Rendered transactions/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 34ms (Views: 29.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2018-12-30 15:49:59 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+30OnPkFG709wWktiYYaLGksap9QUpCb3tY+Dl9jolnq+tZ+Po2dQDAA+ynvhX0ntEvR1EY1xZ3z8gX3VsrF/Q==", "transaction"=>{"amount"=>"111", "currency"=>"real", "quotation"=>"2.2", "transaction_type"=>"buy", "user_id"=>"1"}, "commit"=>"Cadastrar"}
+Unpermitted parameter: :user_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/new.html.erb:16
+  Rendered transactions/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 35ms (Views: 29.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2018-12-30 15:50:00 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+30OnPkFG709wWktiYYaLGksap9QUpCb3tY+Dl9jolnq+tZ+Po2dQDAA+ynvhX0ntEvR1EY1xZ3z8gX3VsrF/Q==", "transaction"=>{"amount"=>"111", "currency"=>"real", "quotation"=>"2.2", "transaction_type"=>"buy", "user_id"=>"1"}, "commit"=>"Cadastrar"}
+Unpermitted parameter: :user_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/new.html.erb:16
+  Rendered transactions/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 36ms (Views: 31.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2018-12-30 15:50:01 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+30OnPkFG709wWktiYYaLGksap9QUpCb3tY+Dl9jolnq+tZ+Po2dQDAA+ynvhX0ntEvR1EY1xZ3z8gX3VsrF/Q==", "transaction"=>{"amount"=>"111", "currency"=>"real", "quotation"=>"2.2", "transaction_type"=>"buy", "user_id"=>"1"}, "commit"=>"Cadastrar"}
+Unpermitted parameter: :user_id
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/new.html.erb:16
+  Rendered transactions/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 47ms (Views: 31.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2018-12-30 15:50:02 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+30OnPkFG709wWktiYYaLGksap9QUpCb3tY+Dl9jolnq+tZ+Po2dQDAA+ynvhX0ntEvR1EY1xZ3z8gX3VsrF/Q==", "transaction"=>{"amount"=>"111", "currency"=>"real", "quotation"=>"2.2", "transaction_type"=>"buy", "user_id"=>"1"}, "commit"=>"Cadastrar"}
+Unpermitted parameter: :user_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/new.html.erb:16
+  Rendered transactions/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 42ms (Views: 35.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2018-12-30 15:50:02 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+30OnPkFG709wWktiYYaLGksap9QUpCb3tY+Dl9jolnq+tZ+Po2dQDAA+ynvhX0ntEvR1EY1xZ3z8gX3VsrF/Q==", "transaction"=>{"amount"=>"111", "currency"=>"real", "quotation"=>"2.2", "transaction_type"=>"buy", "user_id"=>"1"}, "commit"=>"Cadastrar"}
+Unpermitted parameter: :user_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/new.html.erb:16
+  Rendered transactions/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 43ms (Views: 36.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2018-12-30 15:50:03 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+30OnPkFG709wWktiYYaLGksap9QUpCb3tY+Dl9jolnq+tZ+Po2dQDAA+ynvhX0ntEvR1EY1xZ3z8gX3VsrF/Q==", "transaction"=>{"amount"=>"111", "currency"=>"real", "quotation"=>"2.2", "transaction_type"=>"buy", "user_id"=>"1"}, "commit"=>"Cadastrar"}
+Unpermitted parameter: :user_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/new.html.erb:16
+  Rendered transactions/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 41ms (Views: 34.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2018-12-30 15:50:03 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+30OnPkFG709wWktiYYaLGksap9QUpCb3tY+Dl9jolnq+tZ+Po2dQDAA+ynvhX0ntEvR1EY1xZ3z8gX3VsrF/Q==", "transaction"=>{"amount"=>"111", "currency"=>"real", "quotation"=>"2.2", "transaction_type"=>"buy", "user_id"=>"1"}, "commit"=>"Cadastrar"}
+Unpermitted parameter: :user_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/new.html.erb:16
+  Rendered transactions/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 39ms (Views: 32.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2018-12-30 15:50:04 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+30OnPkFG709wWktiYYaLGksap9QUpCb3tY+Dl9jolnq+tZ+Po2dQDAA+ynvhX0ntEvR1EY1xZ3z8gX3VsrF/Q==", "transaction"=>{"amount"=>"111", "currency"=>"real", "quotation"=>"2.2", "transaction_type"=>"buy", "user_id"=>"1"}, "commit"=>"Cadastrar"}
+Unpermitted parameter: :user_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/new.html.erb:16
+  Rendered transactions/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 37ms (Views: 31.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2018-12-30 15:50:04 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+30OnPkFG709wWktiYYaLGksap9QUpCb3tY+Dl9jolnq+tZ+Po2dQDAA+ynvhX0ntEvR1EY1xZ3z8gX3VsrF/Q==", "transaction"=>{"amount"=>"111", "currency"=>"real", "quotation"=>"2.2", "transaction_type"=>"buy", "user_id"=>"1"}, "commit"=>"Cadastrar"}
+Unpermitted parameter: :user_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/new.html.erb:16
+  Rendered transactions/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 45ms (Views: 38.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2018-12-30 15:50:04 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+30OnPkFG709wWktiYYaLGksap9QUpCb3tY+Dl9jolnq+tZ+Po2dQDAA+ynvhX0ntEvR1EY1xZ3z8gX3VsrF/Q==", "transaction"=>{"amount"=>"111", "currency"=>"real", "quotation"=>"2.2", "transaction_type"=>"buy", "user_id"=>"1"}, "commit"=>"Cadastrar"}
+Unpermitted parameter: :user_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/new.html.erb:16
+  Rendered transactions/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 42ms (Views: 36.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2018-12-30 15:50:05 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+30OnPkFG709wWktiYYaLGksap9QUpCb3tY+Dl9jolnq+tZ+Po2dQDAA+ynvhX0ntEvR1EY1xZ3z8gX3VsrF/Q==", "transaction"=>{"amount"=>"111", "currency"=>"real", "quotation"=>"2.2", "transaction_type"=>"buy", "user_id"=>"1"}, "commit"=>"Cadastrar"}
+Unpermitted parameter: :user_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/new.html.erb:16
+  Rendered transactions/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 41ms (Views: 34.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2018-12-30 15:50:05 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+30OnPkFG709wWktiYYaLGksap9QUpCb3tY+Dl9jolnq+tZ+Po2dQDAA+ynvhX0ntEvR1EY1xZ3z8gX3VsrF/Q==", "transaction"=>{"amount"=>"111", "currency"=>"real", "quotation"=>"2.2", "transaction_type"=>"buy", "user_id"=>"1"}, "commit"=>"Cadastrar"}
+Unpermitted parameter: :user_id
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/new.html.erb:16
+  Rendered transactions/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 48ms (Views: 39.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2018-12-30 15:50:06 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+30OnPkFG709wWktiYYaLGksap9QUpCb3tY+Dl9jolnq+tZ+Po2dQDAA+ynvhX0ntEvR1EY1xZ3z8gX3VsrF/Q==", "transaction"=>{"amount"=>"111", "currency"=>"real", "quotation"=>"2.2", "transaction_type"=>"buy", "user_id"=>"1"}, "commit"=>"Cadastrar"}
+Unpermitted parameter: :user_id
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/new.html.erb:16
+  Rendered transactions/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 42ms (Views: 35.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2018-12-30 15:50:07 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+30OnPkFG709wWktiYYaLGksap9QUpCb3tY+Dl9jolnq+tZ+Po2dQDAA+ynvhX0ntEvR1EY1xZ3z8gX3VsrF/Q==", "transaction"=>{"amount"=>"111", "currency"=>"real", "quotation"=>"2.2", "transaction_type"=>"buy", "user_id"=>"1"}, "commit"=>"Cadastrar"}
+Unpermitted parameter: :user_id
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/new.html.erb:16
+  Rendered transactions/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 48ms (Views: 39.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2018-12-30 15:50:08 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+30OnPkFG709wWktiYYaLGksap9QUpCb3tY+Dl9jolnq+tZ+Po2dQDAA+ynvhX0ntEvR1EY1xZ3z8gX3VsrF/Q==", "transaction"=>{"amount"=>"111", "currency"=>"real", "quotation"=>"2.2", "transaction_type"=>"buy", "user_id"=>"1"}, "commit"=>"Cadastrar"}
+Unpermitted parameter: :user_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/new.html.erb:16
+  Rendered transactions/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 43ms (Views: 36.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2018-12-30 15:50:08 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+30OnPkFG709wWktiYYaLGksap9QUpCb3tY+Dl9jolnq+tZ+Po2dQDAA+ynvhX0ntEvR1EY1xZ3z8gX3VsrF/Q==", "transaction"=>{"amount"=>"111", "currency"=>"real", "quotation"=>"2.2", "transaction_type"=>"buy", "user_id"=>"1"}, "commit"=>"Cadastrar"}
+Unpermitted parameter: :user_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/new.html.erb:16
+  Rendered transactions/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 41ms (Views: 35.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2018-12-30 15:50:09 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+30OnPkFG709wWktiYYaLGksap9QUpCb3tY+Dl9jolnq+tZ+Po2dQDAA+ynvhX0ntEvR1EY1xZ3z8gX3VsrF/Q==", "transaction"=>{"amount"=>"111", "currency"=>"real", "quotation"=>"2.2", "transaction_type"=>"buy", "user_id"=>"1"}, "commit"=>"Cadastrar"}
+Unpermitted parameter: :user_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/new.html.erb:16
+  Rendered transactions/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 48ms (Views: 40.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2018-12-30 15:50:10 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+30OnPkFG709wWktiYYaLGksap9QUpCb3tY+Dl9jolnq+tZ+Po2dQDAA+ynvhX0ntEvR1EY1xZ3z8gX3VsrF/Q==", "transaction"=>{"amount"=>"111", "currency"=>"real", "quotation"=>"2.2", "transaction_type"=>"buy", "user_id"=>"1"}, "commit"=>"Cadastrar"}
+Unpermitted parameter: :user_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/new.html.erb:16
+  Rendered transactions/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 36ms (Views: 30.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2018-12-30 15:50:12 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+30OnPkFG709wWktiYYaLGksap9QUpCb3tY+Dl9jolnq+tZ+Po2dQDAA+ynvhX0ntEvR1EY1xZ3z8gX3VsrF/Q==", "transaction"=>{"amount"=>"111", "currency"=>"real", "quotation"=>"2.2", "transaction_type"=>"buy", "user_id"=>"1"}, "commit"=>"Cadastrar"}
+Unpermitted parameter: :user_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/new.html.erb:16
+  Rendered transactions/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 36ms (Views: 30.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2018-12-30 15:50:13 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+30OnPkFG709wWktiYYaLGksap9QUpCb3tY+Dl9jolnq+tZ+Po2dQDAA+ynvhX0ntEvR1EY1xZ3z8gX3VsrF/Q==", "transaction"=>{"amount"=>"111", "currency"=>"real", "quotation"=>"2.2", "transaction_type"=>"buy", "user_id"=>"1"}, "commit"=>"Cadastrar"}
+Unpermitted parameter: :user_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/transactions/new.html.erb:16
+  Rendered transactions/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 37ms (Views: 31.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2018-12-30 15:53:36 -0200
+Processing by TransactionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+30OnPkFG709wWktiYYaLGksap9QUpCb3tY+Dl9jolnq+tZ+Po2dQDAA+ynvhX0ntEvR1EY1xZ3z8gX3VsrF/Q==", "transaction"=>{"amount"=>"111", "currency"=>"real", "quotation"=>"2.2", "transaction_type"=>"buy", "user_id"=>"1"}, "commit"=>"Cadastrar"}
+Unpermitted parameter: :user_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  [1m[36mTransaction Create (0.4ms)[0m  [1m[32mINSERT INTO "transactions" ("amount", "currency", "transaction_type", "created_at", "updated_at", "quotation") VALUES (?, ?, ?, ?, ?, ?)[0m  [["amount", 111.0], ["currency", "real"], ["transaction_type", "buy"], ["created_at", "2018-12-30 17:53:36.088031"], ["updated_at", "2018-12-30 17:53:36.088031"], ["quotation", 2.2]]
+  ↳ app/controllers/transactions_controller.rb:13
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/transactions_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/transactions_controller.rb:15
+Redirected to http://localhost:3000/transactions/2
+Completed 200 OK in 36ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/transactions/2" for 127.0.0.1 at 2018-12-30 15:53:36 -0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:24
+Completed 404 Not Found in 6ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=2):
+  
+app/controllers/transactions_controller.rb:24:in `show'
