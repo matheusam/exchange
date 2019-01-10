@@ -1,13 +1,11 @@
 <h1>Editar transação</h1>
-<p id="notice"><%= flash[:notice] %></p>
+<%= flash[:notice] %>
 <%= link_to "Voltar", root_path %>
-  <% if @transaction.errors.full_messages.any? %>
-    <p>Você deve informar todos os dados da transação</p>
-  <% end %>
+
+
   <%= form_with model: @transaction do |form| %>
   <h3>Quantidade</h3>
   <%= form.text_field :amount, placeholder: "Quantidade" %>
-  <!-- <h3>Moeda</h3> -->
   <%= form.label :currency, 'Moeda' %>
   <%= form.select :currency,  [['Dólar', 'dollar'], ['Real', 'real']], :include_blank => "Escolha a moeda" %>
   <h3>Cotação</h3>

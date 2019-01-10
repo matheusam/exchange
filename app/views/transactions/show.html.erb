@@ -2,6 +2,8 @@
 <%= link_to "Voltar", root_path %>
 <%= link_to "Editar", edit_transaction_path %>
 <%= link_to 'Apagar', @transaction, method: :delete, data: { confirm: 'Mandar transação para o limbo?' } %>
+<br>
+<%= flash[:vazio] %>
 
   <h3>Identificador</h3>
     <p><%= @transaction.id %></p>

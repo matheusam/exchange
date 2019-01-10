@@ -1,5 +1,8 @@
 class Transaction < ApplicationRecord
   validates :amount, :currency, :quotation, :transaction_type, presence: true
+  validates :amount, presence: { message: "Você deve informar todos os dados da transação" }
+  validates :quotation, presence: { message: "Você deve informar todos os dados da transação" }
+
   def str_converter(input)
     case input
       when 'dollar'

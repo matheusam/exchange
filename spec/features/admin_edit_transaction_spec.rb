@@ -43,7 +43,6 @@ feature 'Admin edits transaction' do
     fill_in 'Cotação', with: ''
     click_on 'Editar'
 
-    expect(page).to have_content('Você deve informar todos os dados da '\
-                                 'transação')
+    expect(page).to have_content('Você deve informar todos os dados da transação')
   end
 end

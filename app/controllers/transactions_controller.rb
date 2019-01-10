@@ -23,6 +23,7 @@ class TransactionsController < ApplicationController
   def show
     @user = User.find(params[:id])
     @transaction = Transaction.find(params[:id])
+    flash[:vazio] = 'Você deve informar todos os dados da transação'
   end
 
   def edit
@@ -35,7 +36,7 @@ class TransactionsController < ApplicationController
       @transaction.update(transaction_params)
       redirect_to transaction_path(@transaction)
     else
-      flash[:warning] = 'Você deve informar todos os dados da transação'
+      render :edit
     end
   end
 
